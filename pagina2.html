@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retratos</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Your Logo">
+            </a>
+        </div>
+
+        <div class="center-logo">
+                <img src="logo2.png" alt="Your Logo 2">
+        </div>
+
+        <div class="social-media">
+            <a href="https://www.instagram.com/beautifulpain.tattoo/">
+                <img src="instagram.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Section -->
+    <main>
+        <section class="text-section">
+            <div class="fade"></div> <!-- This div will create the fade effect -->
+            <h2>Solicitar um retrato emoldurado</h2>
+
+            <!-- Expandable Text Topics -->
+            <div class="topics-container">
+                <div class="topic" onclick="toggleContent('topic1')">
+                    <div class="topic-header">
+                        <div class="topic-title">Informação Geral</div>
+                        <span class="expand-icon">-</span>
+                    </div>
+                    <div class="expanded-content show" id="topic1">
+                        <p>Por favor lê cuidadosamente todos os tópicos abaixo e,
+                            se estiveres pronto para solicitar um retrato, <b>envia-nos 
+                            um e-mail utilizando o botão ao fundo desta página. </b> Não te esqueças de incluir 
+                         a informação que é pedida, caso contrário não iremos poder responder.</p>
+                    </div>
+                </div>
+            
+                <div class="topic" onclick="toggleContent('topic2')">
+                    <div class="topic-header">
+                        <div class="topic-title">Fotografia e Desenho</div>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="expanded-content" id="topic2">
+                        <p>Todos os retratos são baseados numa fotografia enviada
+                            por ti. <br> O artista irá basear-se na foto enviada para desenhar o rosto da pessoa em questão. 
+                        </p>
+
+                        <p> 
+                            Podes escolher enviar somente uma foto ou, em caso de indecisão, podes enviar as tuas fotos favoritas e o artista irá escolher a que achar melhor para reproduzir em desenho. 
+                        </p>
+
+                        <p> Envia fotografias com boa iluminação e com uma certa proximidade do rosto - fotos tiradas à 
+                        distância não poderão ser aceites.</p>
+
+                        <p>Alguns retratos podem receber um toque subtil de decoração, inspirado nas influências pessoais do artista, 
+                            como exemplificado na fotografia abaixo. Isto visa aprimorar visualmente o desenho, 
+                            proporcionando uma estética <b>ainda mais</b> agradável à folha (porque a tua beleza natural já é notável por si só).
+                        </p>
+
+                          <p>
+                            Caso pretendas presentear o retrato, podes incluir no teu envio o nome da pessoa a ser retratada. Caso decidas, podes também  
+                          escolher uma frase a teu gosto para lhe dedicar. As tuas escolhas irão ser escritas e enquadradas
+                         no retrato pelo artista.
+                        </p>
+
+                     
+                        <p>
+                            Apenas propostas de retratos femininos serão consideradas.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="topic" onclick="toggleContent('topic3')">
+                    <div class="topic-header">
+                        <div class="topic-title">Preço e depósito</div>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="expanded-content" id="topic3">
+                      
+                        <p>
+                            Cada retrato tem o preço total de 225€. Neste momento só aceitamos pagamentos
+                            em dinheiro ou MB Way. 
+                         
+
+                        </p>
+                        <p>
+                            Um depósito é necessário para confirmares o teu pedido - isto serão 100€.
+                            Este depósito não é reembolsável.
+                        </p>
+
+                        <p>
+                            O depósito serve para reservares as horas de trabalho dedicadas ao teu retrato. 
+                        </p>
+                            
+                        <p>
+                        O valor deste depósito será subtraído do valor total do retrato.
+                        </p>
+                        
+
+                        <p>
+                           O pagamento do valor restante é devido após a conclusão do retrato, para que este te possa ser enviado.                           
+                        </p>
+
+
+
+                    </div>
+                </div>
+
+                <div class="topic" onclick="toggleContent('topic4')">
+                    <div class="topic-header">
+                        <div class="topic-title">Envios</div>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="expanded-content" id="topic4">
+
+                        <p>
+                        Fazemos os envios por CTT ou entrega em mãos.
+                        </p>
+
+                        <p>
+                           O envio por CTT não terá custos adicionais para o teu pedido. Menciona a tua morada no e-mail se preferes
+                           este método de entrega.
+                        </p>
+
+                        <p>
+                            Estamos localizados em Cucujães, Oliveira de Azeméis - distrito de Aveiro pelo que terás de te deslocar até nós, caso prefiras
+                           a entrega em mãos.
+                        </p>
+
+
+                        <p> O teu retrato terá
+                            um tempo de espera de 3 semanas até estar disponível para entrega - a contar do momento
+                            em que confirmas o teu pedido com o depósito.
+                            Durante este tempo iremos certificar-nos de que o teu retrato recebe a nossa mais perfeita atenção.
+                        </p>
+
+
+                         <p>
+                            Todos os retratos são entregues numa moldura de 20x25cm, como na imagem abaixo.
+                        </p>
+
+                        <p>
+                        Irás ser notificado assim que o teu retrato estiver pronto para entrega.                        
+                        </p>
+                       
+
+                        <p>
+                            Se tens alguma questão sobre solicitar um retrato, por favor lê a informação 
+                            acima e envia-nos um e-mail.
+                        </p>
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <section class="image-section">
+                <!-- Space for Two Images -->
+                <img src="image2.jpg" alt="Image 2">
+                <!-- Contact Us Button -->
+                <a href="mailto:info.zecesario@gmail.com?subject=Pedido de Retrato" class="contact-button2"><b>Enviar e-mail</b></a>
+            </section>
+        
+    </main>
+
+    <!-- Bottom Bar -->
+    <div class="bottom-bar">
+        <p>© 2024, José Miguel Cesário</p>
+    </div>
+
+    <!-- Dark Fade from Bottom -->
+    <div class="dark-fade"></div>
+
+    <!-- JavaScript for Toggle Content -->
+    <script>
+
+
+// JavaScript for Toggle Content
+document.querySelectorAll('.topic').forEach(function (topic) {
+    topic.addEventListener('click', function (event) {
+        // Check if the click was on the topic header
+        if (event.target.closest('.topic-header')) {
+            var content = this.querySelector('.expanded-content');
+            var expandIcon = this.querySelector('.expand-icon');
+
+            // Toggle the 'show' class after a short delay to allow for the transition
+            setTimeout(function () {
+                content.classList.toggle('show');
+            }, 50);
+
+            // Toggle the 'expanded' class on the parent topic div
+            topic.classList.toggle('expanded');
+
+            // Toggle the expand icon
+            expandIcon.textContent = (expandIcon.textContent === '+') ? '-' : '+';
+
+            // Scroll the page to show or hide the expanded content with a smoother animation
+            if (topic.classList.contains('expanded')) {
+                scrollToSmooth(topic.offsetTop);
+            } else {
+                scrollToSmooth(topic.offsetTop - content.clientHeight);
+            }
+        }
+    });
+});
+
+// Function to scroll smoothly to a specific position on the page
+function scrollToSmooth(targetPosition) {
+    var startPosition = window.pageYOffset;
+    var distance = targetPosition - startPosition;
+    var startTime;
+
+    function animation(currentTime) {
+        if (startTime === undefined) startTime = currentTime;
+        var timeElapsed = currentTime - startTime;
+        var run = easeInOutQuad(timeElapsed, startPosition, distance, 700);
+        window.scrollTo(0, run);
+        if (timeElapsed < 700) requestAnimationFrame(animation);
+    }
+
+    // Easing function
+    function easeInOutQuad(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+}
+
+
+    </script>
+</body>
+
+</html>

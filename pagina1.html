@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatuagem</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Your Logo">
+            </a>
+        </div>
+
+        <div class="center-logo">
+                <img src="logo2.png" alt="Your Logo 2">
+        </div>
+
+        <div class="social-media">
+            <a href="https://www.instagram.com/beautifulpain.tattoo/">
+                <img src="instagram.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Section -->
+    <main>
+        <section class="text-section">
+            <div class="fade"></div> <!-- This div will create the fade effect -->
+            <h2>Marcações <br>de tatuagem</h2>
+
+            <!-- Expandable Text Topics -->
+            <div class="topics-container">
+                <div class="topic" onclick="toggleContent('topic1')">
+                    <div class="topic-header">
+                        <div class="topic-title">Informação Geral</div>
+                        <span class="expand-icon">-</span>
+                    </div>
+                    <div class="expanded-content show" id="topic1">
+                        <p>Lamentamos informar que o nosso serviço de tatuagens encontra-se temporariamente suspenso.
+                            <br>Estamos a trabalhar para recomeçar a atividade o mais cedo possível. <br>
+                            Obrigado.
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="topic" onclick="toggleContent('topic2')">
+                    <div class="topic-header">
+                        <div class="topic-title">Desenho da tua tattoo</div>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="expanded-content" id="topic2">
+                        
+
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="topic" onclick="toggleContent('topic3')">
+                    <div class="topic-header">
+                        <div class="topic-title">Preço e depósito</div>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="expanded-content" id="topic3">
+                      
+                    
+                        
+
+                    </div>
+                </div>
+
+                <div class="topic" onclick="toggleContent('topic4')">
+                    <div class="topic-header">
+                        <div class="topic-title">Localização</div>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="expanded-content" id="topic4">
+                       
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="image-section">
+            <!-- Space for Two Images -->
+              
+                 <!-- Contact Us Button -->
+                 <a href="mailto:info.zecesario@gmail.com?subject=Marcação de tatuagem" class="contact-button2"><b>Enviar e-mail</b></a>
+        </section>
+    </main>
+
+    <!-- Bottom Bar -->
+    <div class="bottom-bar">
+        <p>© 2024, José Miguel Cesário</p>
+    </div>
+
+    <!-- Dark Fade from Bottom -->
+    <div class="dark-fade"></div>
+
+    <!-- JavaScript for Toggle Content -->
+    <script>
+
+
+// JavaScript for Toggle Content
+document.querySelectorAll('.topic').forEach(function (topic) {
+    topic.addEventListener('click', function (event) {
+        // Check if the click was on the topic header
+        if (event.target.closest('.topic-header')) {
+            var content = this.querySelector('.expanded-content');
+            var expandIcon = this.querySelector('.expand-icon');
+
+            // Toggle the 'show' class after a short delay to allow for the transition
+            setTimeout(function () {
+                content.classList.toggle('show');
+            }, 50);
+
+           // Toggle the 'expanded' class on the parent topic div
+           topic.classList.toggle('expanded');
+
+            // Toggle the expand icon
+            expandIcon.textContent = (expandIcon.textContent === '+') ? '-' : '+';
+
+            // Scroll the page to show or hide the expanded content with a smoother animation
+            if (topic.classList.contains('expanded')) {
+                scrollToSmooth(topic.offsetTop);
+            } else {
+                scrollToSmooth(topic.offsetTop - content.clientHeight);
+            }
+        }
+    });
+});
+
+// Function to scroll smoothly to a specific position on the page
+function scrollToSmooth(targetPosition) {
+    var startPosition = window.pageYOffset;
+    var distance = targetPosition - startPosition;
+    var startTime;
+
+    function animation(currentTime) {
+        if (startTime === undefined) startTime = currentTime;
+        var timeElapsed = currentTime - startTime;
+        var run = easeInOutQuad(timeElapsed, startPosition, distance, 700);
+        window.scrollTo(0, run);
+        if (timeElapsed < 700) requestAnimationFrame(animation);
+    }
+
+    // Easing function
+    function easeInOutQuad(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+}
+
+
+    </script>
+</body>
+
+</html>

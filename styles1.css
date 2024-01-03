@@ -1,0 +1,388 @@
+/* Reset or Normalize (if used) */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    color: #333;
+    
+}
+
+/* Top Bar Styles */
+.top-bar {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+
+.logo,
+.center-logo {
+    text-align: center;
+}
+
+.center-logo img {
+    max-height: 80px; /* Adjust the height as needed */
+    max-width: 100%; /* Ensures the width scales proportionally with the height */
+}
+
+
+.logo img {
+    max-height: 80px;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+.social-media img {
+    max-height: 30px;
+    margin-left: 10px; /* Adjust margin as needed */
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/* Main Section Styles */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.text-section {
+    position: relative;
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.text-section .fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px; /* Adjust the height of the fade effect */
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.747) 100%);
+    pointer-events: none; /* Ensures the fade doesn't interfere with content */
+}
+
+
+h2 {
+    font-size: 25.5px;
+    margin-bottom: 20px;
+    color: #000000;
+    margin: 20px;
+    padding: 7px;
+}
+
+.topics-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    max-width: 100%; /* Set a maximum width for better readability */
+    margin: 0 auto; /* Center the container */
+}
+
+.topic {
+    width: 80%;
+    margin: 1.5px auto;
+    padding: 20px;
+    background:
+        linear-gradient(to right, #000000, #000000) bottom;
+    background-size: 100% 1px; /* Set the height to 1px */
+    background-repeat: no-repeat;
+    color: #000000;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.topic-title {
+    font-weight: bold; /* Adjust the font weight for topic titles */
+    font-size: 22px;
+    color: #000000;
+
+}
+
+
+.topic:not(:last-child) {
+    border-bottom: none; /* Remove the bottom border for all topics except the last one */
+}
+
+.topic:hover {
+    background-color: #f0f0f0;
+}
+
+.expanded-content {
+    display: block; /* Change this to 'block' to ensure it's initially visible */
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    border: 1px solid transparent #ffffff;
+    border-top: none;
+    cursor: default;
+    font-size: 20px;
+    transition: max-height 1s ease; /* Add transition for max-height */
+}
+
+.topic,
+.expanded-content {
+    width: 80%;
+    margin: 1.5px auto;
+    text-align: left;
+    cursor: pointer;
+}
+
+
+p {
+    line-height: 1.7; /* Unitless number */
+  }
+  
+  p {
+    margin-bottom: 30px; /* You can adjust the value as needed */
+  }
+
+
+.expanded-content.show {
+    max-height: 500px; /* Adjust the value to a sufficiently large height */
+}
+
+.expanded-content:hover {
+    cursor: text;
+}
+
+
+
+.topic {
+    width: 80%;
+    margin: 1.5px auto;
+    padding: 2px;
+    background: linear-gradient(to right, #000000, #000000) bottom;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    color: #000000;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.topic-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px;
+}
+
+.expand-icon {
+    font-size: 35px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.topic.expanded .expand-icon {
+    transform: rotate(-180deg);
+}
+
+.expanded-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid transparent #ffffff;
+    border-top: none;
+    cursor: default;
+}
+
+.expanded-content.show {
+    display: block;
+    border-color: #ccc; /* Set the border color to match the desired background color */
+}
+
+
+.topic.expanded .expanded-content {
+    max-height: 2000px; /* Adjust the value to a sufficiently large height */
+    padding: 20px; /* Adjust the value to match the expanded content padding */
+}
+
+
+
+
+
+.image-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center the single image */
+    width: 100%;
+    position: relative;
+    background: linear-gradient(transparent, #000000);
+    height: 150px;
+}
+
+.image-section img {
+    width: 61%; /* Adjust the width as needed */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 0px;
+}
+
+.image-section::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    width: 80%;
+    height: 100px; /* Adjust the height of the fade effect */
+    
+    pointer-events: none;
+    z-index: 1; /* Ensure the pseudo-element is above the images */
+}
+
+
+
+
+
+.contact-button2 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 18px;
+    background-color: #111111;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.contact-button2:hover {
+    background-color: #494949; /* Change the color on hover */
+    color: #ffffff; /* Change the text color on hover */
+}
+
+
+
+/* Bottom Bar Styles */
+.bottom-bar {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 2px;
+    position: relative;
+}
+
+
+
+
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+    .logo img,
+    .center-logo img {
+        max-height: 60px; /* Adjust as needed for smaller screens */
+    }
+
+    .social-media img {
+        max-height: 20px; /* Adjust as needed for smaller screens */
+    }
+
+    .text-section {
+        padding: 20px; /* Adjust spacing for smaller screens */
+    }
+
+    .image-section img {
+        width: 100%; /* Make the image full-width on smaller screens */
+        border-radius: 0; /* Remove border-radius on smaller screens if needed */
+    }
+
+
+
+    .image-section::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px; /* Adjust the height of the fade effect */
+        background: linear-gradient(transparent, #000000); /* Adjust the gradient to your liking */
+        pointer-events: none;
+        z-index: 1; /* Ensure the pseudo-element is above the images */
+    }
+
+
+
+    .contact-button,
+    .contact-button2 {
+        font-size: 19px; /* Adjust button font size for smaller screens */
+        z-index: 2; /* Ensure the button is in front of the dark fade */
+      
+    }
+
+    .topic {
+        width: 100%; /* Make topics full-width on smaller screens */
+        margin: 1px ; /* Adjust margin for better spacing on smaller screens */
+    }
+
+    .expanded-content,
+    .topic {
+        padding: 0px; /* Adjust padding for smaller screens */
+    }
+
+    .expanded-content {
+        margin: 0 auto; /* Center the content */
+        /* Any other styles specific to smaller screens can be added here */
+        font-size: 20px;
+       
+        text-decoration: solid;
+        width: 90%
+    }
+
+
+    .topics-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        max-width: 100%; /* Set a maximum width for better readability */
+        margin: 0 auto; /* Center the container */
+        text-align: left;
+    }
+
+    .topic:hover {
+        background-color: #ffffff;
+    }
+
+    .social-media img {
+        max-height: 30px;
+        margin-left: 10px; /* Adjust margin as needed */
+    }
+
+    .bottom-bar {
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        padding: 1px;
+        position: relative;
+    }
+
+    .bottom-bar p {
+        margin: 17px; /* Remove default margin */
+    }
+
+}
